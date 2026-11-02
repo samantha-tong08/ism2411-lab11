@@ -28,5 +28,16 @@ print(customer)
 print(customer.get("ytd_spend",0))
 
 print("--- Exercise 3 ---")
+
 print(customer.get("email", "no email on file"))
-      
+
+print("--- Exercise 4 ---")
+
+for key, value in customer.items(): 
+    print(f"{key}: {value}")
+
+for something in customer:
+    print(something, customer[something])
+
+print("--- Exercise 5 ---")
+
