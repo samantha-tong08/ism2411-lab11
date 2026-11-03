@@ -57,9 +57,11 @@ print(f"Final Price: ${final_price:.2f}")
 
 print("--- Exercise 6 ---")
 
-# customers = [
-#   {"name": "Alice", "tier": "gold"},
-# ]
+customers = [
+   {"name": "Bob", "tier": "gold", "ytd_spend": 8750},
+   {"name": "Charlie", "tier": "silver", "ytd_spend": 5000},
+   {"name": "Diana", "tier": "platinum", "ytd_spend": 15000},
+]
 
 for record in customers:
     rate = tier_discounts.get(record["tier"], 0)
@@ -76,3 +78,22 @@ catalog = {
 for name, details in catalog.items():
     if details["stock"] < 20:
         print(f"LOW STOCK: {name} - only {details['stock']} left")
+
+print("--- Exercise 8 ---")
+
+transactions = [
+    {"region": "South", "amount": 300},
+    {"region": "North", "amount": 150},
+    {"region": "South", "amount": 200},
+]
+
+sales_by_region = {}
+for sale in transactions:
+    region = sale["region"]
+    amount = sale["amount"]
+    sales_by_region[region] = sales_by_region.get(region, 0) + amount
+
+print(sales_by_region)
+
+for region in sorted(sales_by_region):
+    print(f"{region}: ${sales_by_region[region]:.2f}")
