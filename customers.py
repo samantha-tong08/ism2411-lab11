@@ -1,6 +1,11 @@
 # Author: Samantha Tong
 # Module 11 Lab: Customer Dictionary and Lookup
 
+print("--- Reflection ---")
+
+# 1. It's better to use .get() when a key doesn't exist in the dictionary and the value isn't as important, so it can just be set to a default value. An example would be if you were looking up a customer's phone number. It's better to use the bracket notation when a key is required. For example, looking up a customer's full name.
+# 2. The pattern reminds me of a PivotTable in Excel. The Python version might be more useful for larger datasets because it can be ran automatically.
+
 print("--- Exercise 1 ---")
 
 customer = {
